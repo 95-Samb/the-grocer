@@ -1,4 +1,5 @@
 # myapp.rb
+require 'bundler/setup'
 require 'sinatra'
 get '/' do
   erb :hello
