@@ -1,8 +1,22 @@
 <head>
 	<link href="<%= url('/css/style.css') %>" rel="stylesheet" type="text/css" />
 </head>
+<div class = "border1">
+<ul>
+	<li>
+	<a href="/">Home</a>
+	</li>
+	<li>
+	<a href="https://www.google.com" target=blank>
+		Sams Programming knowledge</a>
+	</li>
+	<li class="active">
+	<a href="/inventory">Inventory</a>
+	</li>
+</ul>
+</div>
 
-
+<div align="center">
 <body>
 <table>
 	<tr>
@@ -22,3 +36,7 @@
 	</tr>
 </table>
 </body>
+</div>
+
+<%= @@csv_string.split(" ") %>
+  
