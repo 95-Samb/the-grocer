@@ -17,26 +17,51 @@
 </div>
 
 <div align="center">
-<body>
-<table>
-	<tr>
-		<th>1st row</th>
-		<th>2nd row</th>
-		<th>3rd row</th>
-	</th>
-	<tr>
-		<td>1st item</td>
-		<td>2nd item</td>
-		<td>3rd item</td>
-	</tr>
-	<tr>
-		<td>1st amount</td>
-		<td>2nd amount</td>
-		<td>3rd amount</td>
-	</tr>
-</table>
-</body>
+	<table>
+		 	<tr>
+				<th>ID</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Stock</th>
+			</tr>
+		<% @products.each do |product| %>
+			<tr>
+			  <td> <%= product[:id] %> </td>
+			  <td> <%= product[:name] %> </td>
+			  <td> <%= product[:price] %> </td>
+			  <td> <%= product[:stock] %> </td>
+			</tr>
+		<% end %>
+	</table>
 </div>
 
-<%= @@csv_string.split(" ") %>
-  
+<div>
+	<form method="POST">
+		<div>
+			<label>Product ID</label>
+			<input autocomplete="off" type="text" name="id">
+		</div>
+
+		<div>
+			<label>Product Name</label>
+			<input autocomplete="off" type="text" name="name">
+		</div>
+
+		<div>
+			<label>Price</label>
+			<input type="text" name="price">
+		</div>
+
+		<div>
+			<label>Stock</label>
+			<input type="text" name="stock">
+		</div>
+
+		<div>
+			<input type="submit" value="Add new product">
+		</div>
+	</form>
+</div>
+
+
+
