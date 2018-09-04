@@ -13,6 +13,11 @@ gem install rerun
 rerun "ruby myapp"
 ```
 
+To run the tests
+```
+bundle exec rspec
+```
+
 ## Objective:
 Aim to simulate a small grocery shop with inventory and financial management.
 
