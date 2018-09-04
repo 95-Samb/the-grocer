@@ -17,6 +17,8 @@ GEM
     rack (2.0.5)
     rack-protection (2.0.3)
       rack
+    rack-test (1.1.0)
+      rack (>= 1.0, < 3)
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
@@ -50,6 +52,7 @@ PLATFORMS
 DEPENDENCIES
   nokogiri
   rack (~> 2.0.1)
+  rack-test
   rerun (~> 0.13.0)
   rspec
   sinatra

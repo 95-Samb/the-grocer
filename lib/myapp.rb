@@ -38,10 +38,10 @@ class App < Sinatra::Base
   end
 
   post '/inventory' do
-    @id = params["id"]
-    @name = params["name"]
-    @price = params["price"]
-    @stock = params["stock"]
+    @id = params[:id]
+    @name = params[:name]
+    @price = params[:price]
+    @stock = params[:stock]
     @products.push({id: @id,
         name: @name,
         price: @price,
@@ -51,6 +51,4 @@ class App < Sinatra::Base
   get '/test' do
     erb :test
   end
-
-  #run!
 end
