@@ -52,5 +52,5 @@ class App < Sinatra::Base
     erb :test
   end
 
-  #run!
+  run! if __FILE__ == $0
 end
