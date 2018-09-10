@@ -20,18 +20,7 @@ class App < Sinatra::Base
     end
 
     @products = [
-        {
-            id: 1,
-            name: "Widget",
-            price: "100",
-            stock: 3
-        },
-        {
-            id: 2,
-            name: "Thingy",
-            price: "150",
-            stock: 30
-        },
+        
     ]
 
     erb :inventory_table
@@ -42,10 +31,7 @@ class App < Sinatra::Base
     @name = params["name"]
     @price = params["price"]
     @stock = params["stock"]
-    @products.push({id: @id,
-        name: @name,
-        price: @price,
-        stock: @stock})
+    "[id:#{@id}, name:#{@name}, price:#{@price}, stock:#{@stock}]"
   end
 
   get '/test' do
